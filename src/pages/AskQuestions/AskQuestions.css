@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+:root{
+    --question-primary: #f1f2f3;
+    --font-primary: 'Roboto', sans-serif;
+    --btn-primary: #009dff;
+}
+.ask-question{
+    min-height: 100vh;
+    background-color: var(--question-primary);
+}
+.ask-ques-container{
+    margin: auto;
+    max-width: 1200px;
+}
+.ask-ques-container h1{
+    padding: 90px 0 20px 0;
+}
+.ask-ques-container .ask-form-container{
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 10px 25px rgb(0 0 0 / 5%),
+    0 20px 48px rgb(0 0 0 / 5%),
+    0 1px 4px rgb(0 0 0 / 10%);
+}
+.main-question-container{
+    margin: 0 10em;
+}
+.question-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.ask-form-container .input-group{
+    flex-grow: 1;
+}
+.ask-form-container label h4{
+    margin-bottom: 0;
+}
+.ask-form-container label p{
+    margin: 0;
+    font-size: 13px;
+    padding: 3px 0;
+}
+.ask-form-container label input,
+.ask-form-container label textarea{
+    padding: 10px;
+    border: 1px solid #0000003e;
+    font-family: var(--font-primary);
+    width: calc(100% - 20px);
+    resize: vertical;
+}
+.review-btn{
+    margin: 50px 0;
+    padding: 10px;
+    background-color: var(--btn-primary);
+    border: 1px solid var(--btn-primary);
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .3s;
+}
+.review-btn:hover{
+    background: #0086d8;
+}
+.email-input{
+    font-family: 'Source Sans Pro', sans-serif;
+
+}
+#ask-ques-title{
+    padding: 0;
+    padding-left: 1em;
+}
+#ask-ques-body{
+    min-height: 120px;
+    font-size: .9em;
+    padding: .5em;
+}
+
+/* Load Button */
+.ask-loader-btn{
+    padding: 10px 67px !important;
+}
+
+/* Responsive Code */
+@media screen and (width<=800px){
+    .main-question-container{
+        margin: 0 5em;
+    }
+}
+@media screen and (width<=500px){
+    .main-question-container{
+        margin: 0 2em;
+    }
+}
+@media screen and (width<=400px){
+    .main-question-container h1{
+        font-size: 1.75em;
+    }
+}

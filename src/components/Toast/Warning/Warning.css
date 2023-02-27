@@ -1,0 +1,36 @@
+.wrapper{
+    position: fixed;
+}
+.toast{
+    width: 100%;
+    width: 380px;
+    height: 60px;
+    padding: 5px;
+    background-color: #ffffff;
+    border-radius: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+.container-2{
+    margin-left: 10px;
+    align-items: center;
+    gap: 0 !important;
+}
+.container-2 p{
+    margin: .5em 0;
+    font-size: .85em;
+    margin-left: 1em;
+    color: #05060fc9;
+}
+.warning{
+    border-left: 8px solid #FFC021;
+}
+
+/* Responsive Code */
+@media screen and (width<=500px){
+    .toast{
+        width: 280px;
+    }
+}

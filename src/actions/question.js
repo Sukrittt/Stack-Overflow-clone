@@ -1,0 +1,73 @@
+//api
+import * as api from "../api/index";
+
+//QUESTION
+//to send request to store the question details in the databse
+export const askQuestion = (questionData, navigate) => async (dispatch) => {
+  try {
+    const { data } = await api.postQuestion(questionData);
+    dispatch({ type: "POST_QUESTION", payload: data });
+    dispatch(fetchAllQuestions()); //dispatching this action to display the question on the home page without reload
+    navigate("/");
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+//to send request to get questions from the database
+export const fetchAllQuestions = () => async (dispatch) => {
+  try {
+    const { data } = await api.getQuestion();
+    dispatch({ type: "FETCH_ALL_QUESTIONS", payload: data });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const deleteQuestion = (id, navigate) => async (dispatch) => {
+  try {
+    const { data } = api.deleteQuestion(id);
+    dispatch(fetchAllQuestions());
+    navigate("/"); //to navigate to home page after question deletion
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+//VOTING
+export const voteQuestion = (id, value, userId) => async (dispatch) => {
+  try {
+    const { data } = await api.voteQuestion(id, value, userId);
+    dispatch(fetchAllQuestions());
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+//ANSWER
+//to send request to update the answers to a particular question
+export const postAnswer = (answerData) => async (dispatch) => {
+  try {
+    const { id, noOfAnswers, anwerBody, userAnswered, userId } = answerData;
+    const { data } = await api.postAnswer(
+      id,
+      noOfAnswers,
+      anwerBody,
+      userAnswered,
+      userId
+    );
+    dispatch({ type: "POST_ANSWER", payload: data }); //dispatch the data in the store
+    dispatch(fetchAllQuestions());
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const deleteAnswer = (id, answerId, noOfAnswers) => async (dispatch) => {
+  try {
+    const { data } = await api.deleteAnswer(id, answerId, noOfAnswers);
+    dispatch(fetchAllQuestions()); // fetch all questions from deleting an answer
+  } catch (error) {
+    console.log(error);
+  }
+};

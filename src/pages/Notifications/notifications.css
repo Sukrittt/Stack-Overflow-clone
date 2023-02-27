@@ -1,0 +1,51 @@
+:root{
+    --notify-container-primary: #fdf7e2;
+    --question-border: #d8dadb;
+    --btn-primary: #009dff;
+
+    --success: #5cb85c;
+    --decline: #d9534f;
+}
+.notification-container{
+    background-color: var(--notify-container-primary);
+    height: 80px;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--question-border);
+    padding: 0 30px;
+}
+.notification-container p{
+    font-size: 15px;
+    margin: 0;
+}
+.user-notify-time{
+    font-size: 13px;
+    position: relative;
+    top: 5px;
+    color: gray;
+}
+.notification-user{
+    margin: 4px;
+}
+.friend-request-handle{
+    display: flex;
+    gap: 30px;
+}
+.notification-header{
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Mark-as-read UI */
+.mark-as-read{
+    height: 30px;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: var(--btn-primary);
+    font-size: 1em;
+    font-weight: 500;
+}

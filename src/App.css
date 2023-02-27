@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+:root{
+    --font-primary: 'Source Sans Pro', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+*{
+    font-family: var(--font-primary);
+}
+body{
+    margin: 0;
+}
+::selection{
+    background-color: #018ce3;
+    color: white;
+}
+.home-container-1{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+.home-container-2{
+    min-height: 100vh !important;
+    height: 100% !important;
+    width: calc(100% - 225px);
+    border: 1px solid #d6d9dc;
+    padding: 24px;
+    box-sizing: border-box;
+
+}
+.chatbox-cross{
+    height: 20px;
+    float: right;
+    padding: 10px;
+    cursor: pointer;
+    color: #3a3a3a;
+}
+/* Spinner */
+.lds-ring {
+    display: inline-block;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 47%;
+    top: 50%;
+}
+
+/* Laader UI */
+.loader-svg {
+    width: 2.75em;
+    transform-origin: center;
+    animation: rotate4 2s linear infinite;
+}
+   
+.loader-circle {
+    fill: none;
+    stroke: hsl(214, 97%, 59%);
+    stroke-width: 2.5;
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    animation: dash4 1.5s ease-in-out infinite;
+}
+   
+@keyframes rotate4 {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+   
+@keyframes dash4 {
+    0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 90, 200;
+     stroke-dashoffset: -35px;
+    }
+    100% {
+        stroke-dashoffset: -125px;
+    }
+}   

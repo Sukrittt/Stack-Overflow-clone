@@ -1,0 +1,174 @@
+:root{
+    --btn-primary: #009dff;
+    --btn-primary-hover: #0086b8;
+
+    --comment-bg-primary: #fdf7e2;
+    --question-link-primary: #037ecb;
+    --question-border: #d8dadb;
+}
+.social-container{
+    margin-top: 70px;
+}
+.social-container h1{
+    font-weight: 400;
+}
+.social-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ask-btn{
+    padding: 10px 15px;
+    border-radius: 4px;
+    background-color: var(--btn-primary);
+    cursor: pointer;
+    color: white;
+    border: none;
+    text-decoration: none;
+    transition: .3s;
+}
+.ask-btn:hover{
+    background-color: var(--btn-primary-hover);
+}
+.social-comment{
+    margin: 10px;
+    padding: 10px;
+    min-height: 100px;
+    background-color: var(--comment-bg-primary);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-bottom: 1px solid var(--question-border);
+    display: flex;
+    justify-content: space-between;
+}
+.comment-structure{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.social-msg{
+    color: var(--question-link-primary);
+    padding: 20px;
+    padding-bottom: 10px;
+    max-width: 45em;
+}
+.social-user-posted{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 0 20px;
+}
+.social-user-posted a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.social-user-postedOn{
+    font-size: 13px;
+    padding: 0 20px;
+    color: gray;
+}
+.social-like{
+    padding: 0 25px;
+    padding-bottom: 10px;
+    font-size: 14px;
+    display: flex;
+    gap: 50px;
+    cursor: pointer;
+}
+.social-like div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.submit-comment{
+    margin-top: 25px;
+}
+.social-message-user{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.social-user-link{
+    text-decoration: none;
+    align-items: flex-end;
+}
+#comment{
+    font-family: 'Source Sans Pro', sans-serif;;
+    padding: 5px 10px;
+    font-size: .8em;
+    margin: 10px 0;
+}
+.comment-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.comment-container div{
+    flex-grow: 1;
+}
+.main-comment-container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10vw;
+    width: 80vw;
+}
+.avatar-image{
+    border: 1.5px solid rgb(128, 123, 123);
+    border-radius: 5px;
+    padding: 1px 3px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: whitesmoke;
+    
+}
+.mobile-social-design{
+    justify-content: space-between;
+}
+
+/* Load Button */
+.loader-btn{
+    padding: 10px 32px !important;
+}
+
+.post-hover-text{
+    top: 70px;
+    left: -22px;
+}
+
+/* Responsive Code */
+@media screen  and (width<=600px){
+    .social-comment{
+        flex-direction: column;
+        gap: 0;
+    }
+    .social-msg{
+        margin-top: 0;
+    }
+    .social-message-user{
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .social-user-posted{
+        margin: 0;
+        font-size: .8em;
+    }
+    .social-user-postedOn{
+        font-size: .7em;
+    }
+}
+@media screen  and (width <= 500px){
+    .social-header{
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 1.5em;
+    }
+}
+@media screen  and (width <= 420px){
+    .main-comment-container h1{
+        font-size: 1.5em;
+    }
+    .social-msg{
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,117 @@
+:root{
+    --chat-primary: #ef8236;
+    --chatbox-bg-primary: #f5f5f5;
+}
+.chatbot-icon{
+    display: absolute;
+    position: fixed;
+    bottom: 165px;
+    right: 30px;
+    cursor: pointer;
+    color: var(--chat-primary);
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: white;
+    height: 25px;
+}
+.chatbox-container{
+    position: fixed;
+    right: 25px;
+    bottom: 165px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 400px;
+    width: 300px;
+    background-color: var(--chatbox-bg-primary);
+    /* border: 2px solid black; */
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.chatbox-header{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--chat-primary);
+    border-radius: 5px;
+    color: white;
+}
+.chatbox-header .chatbox-header-child{
+    display: flex;
+    gap: 10px;
+}
+.chatbox-avatar{
+    height: 30px;
+    width:30px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: transparent;
+    position: relative;
+    margin: 6px;
+}
+.chatbox-avatar img{
+    position: absolute;
+    left: -10px;
+    top: -5px;
+}
+.chatbox-cross{
+    height: 20px;
+    float: right;
+    padding: 10px;
+    cursor: pointer;
+    color: #3a3a3a;
+}
+.chatbox-details{
+    font-size: 13px;
+    margin-top: 5px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.chatbox-status{
+    color: white;
+    font-weight: normal;
+    font-size: 13px;
+    letter-spacing: normal;
+}
+.chatbox-details .chatbox-status .online{
+    display: inline-flex;
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    background-color: #00ff00;
+    border: 2px solid white;
+}
+.chatbox-input{
+    width: 96%;
+    padding: 6px;
+    border: none;
+    border-radius: 3px;
+    border-top: 2px solid #c4c4c4;
+    font-size: 13px;
+}
+.chatbox-main-content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.chatbox-message{
+    min-width: 50%;
+    max-width: 75%;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px;
+    background-color: wheat;
+    margin: 5px;
+    float: left;
+}
+.user{
+    float: right;
+}
+.chatbox-icon-cross{
+    position: fixed;
+    bottom: 60px;
+    right: 25px;
+    height: 12px;
+    cursor: pointer;
+    color: gray;
+}
